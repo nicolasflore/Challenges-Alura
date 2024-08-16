@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./images/Logo.png" alt="Logo alura">
+        <h1>Encriptador de texto</h1>
+    </header>
+
+    <main class="encriptacion">
+        <section class="seccion-inicial">
+            <div class="texto-a-encriptar">
+                <textarea class="textarea-usuario text-area" id="textarea-usuario" placeholder="Ingrese el texto aqui" rows="10" cols="30"></textarea>
+            </div>
+            <div class="acciones-usuario">
+                <div class="sugerencia-limpiar">
+                    <div class="sugerencia">
+                        <img src="./images/Vector.png" alt="imagen-sugerencia" class="imagen-sugerencia">
+                        <p class="sugerencia-usuario informacion">Solo letras minúsculas y sin acentos</p>
+                    </div>
+                    <div class="limpiar">
+                        <button class="boton-limpiar" onclick="limpiar()">🗑️</button>
+                    </div>
+                </div>
+                <div class="botones">
+                    <button class="boton-encriptar btn-encriptar" onclick="encriptar()">Encriptar</button>
+                    <button class="boton-desencriptar btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-resultado">
+            <img src="./images/Muñeco.png" alt="muñeco-analizando" class="muñeco" id="muñeco">
+            <div class="area-texto-encriptado mensaje" id="area-texto-encriptado" style="display: none;">
+                <textarea class="texto-encriptado" id="texto-encriptado" cols="20" rows="10"></textarea>
+            </div>
+            <div class="no-texto" id="no-texto">
+                <div class="alertas-resultado" id="alertas-resultado">
+                    <p class="alerta">Ningún mensaje fue encontrado</p>
+                    <p class="indicacion">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+            <div class="botones-seccion2" id="botones-seccion2" style="display: none;">
+                <button class="boton-copiar copiar" onclick="botonCopiar()">Copiar</button>
+            </div>
+        </section> 
+    </main>
+
+    <footer>
+        <a href="https://www.aluracursos.com/cursos" target="_blank">
+            <img class="logo-alura-oracle" src="./images/alura-sin-back.png" alt="Logo ORACLE mas Alura">
+        </a>
+        <p>Desarrollado por Ivan Nicolas Flores &copy;2024</p>
+    </footer>
+    <script src="encriptador.js"></script>
+</body>
+
+</html>
